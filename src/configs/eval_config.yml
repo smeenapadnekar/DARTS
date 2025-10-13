@@ -1,0 +1,24 @@
+output_root: '/media/vplab/OneTouch/Meena/Project/USS/STEGO/outputs'
+pytorch_data_dir: '/media/vplab/OneTouch/Meena/Project/USS/depthg/data'
+experiment_name: "ablation"
+res: 224
+batch_size: 8 
+num_workers: 5                                                                                                                                                    
+run_picie: True
+run_crf: True
+run_prediction: True
+dark_mode: True
+use_ddp: False
+
+model_paths:
+  
+    - "/media/vplab/OneTouch/Meena/Project/USS/DARTS/outputs/checkpoints/KP/KP_exp1_date_Oct13_16-33-50/last.ckpt"
+  #- "../saved_models/cityscapes_vit_base_1.ckpt"
+  #- "../saved_models/potsdam_test.ckpt"PST_exp1_date_Aug24_22-28-30
+
+hydra:
+  run:
+    dir: "."
+  output_subdir: ~
+  #job_logging: "disabled"
+  #hydra_logging: "disabled"
