@@ -60,14 +60,20 @@ Download datasets and place them in 'data' folder in the following structure:
 
 python crop_datasets.py
 ```
+## Training
+
+To train from scratch, please first generate the KNN indices for the datasets of interest. Note that this requires generating a cropped dataset first, and you may need to modify `crop datasets.py` to specify the dataset that you are cropping:
+
+```shell script
+python src/crop_datasets.py
+python src/precompute_knns.py
 
 ### Checkpoints
-Download the checkpoints from [[Google Drive](https://drive.google.com/drive/folders/1DueMGFkN6p1RvCxym5BpxsOdm2q3tSCl?usp=drive_link) | [BaiduPan (pw: 2pqh)](https://pan.baidu.com/s/1rK8L7uHmaE5Vun4yLnnL5g?pwd=2pqh)] to `checkpoints` folder.
 
 ### Model training
-Hyperparameters can be modified in [`SmooSeg/configs/train_config.yaml`](configs/train_config.yaml).
+Hyperparameters can be modified in [`DARTS/src/configs/train_config.yaml`](configs/train_config.yaml).
 ```shell script
-CUDA_VISIBLE_DEVICES="0" python train_segmentation.py
+CUDA_VISIBLE_DEVICES="0" python src/train_segmentation.py
 ```
 
 ## Evaluation
@@ -76,27 +82,17 @@ To evaluate our pretrained models please run the following in:
 ```shell script
 python src/eval_segmentation.py
 ```
-One can change the evaluation parameters and model by editing [`STEGO/src/configs/eval_config.yml`](src/configs/eval_config.yml)
+One can change the evaluation parameters and model by editing [`DARTS/src/configs/eval_config.yml`](src/configs/eval_config.yml)
 
-## Training
 
-To train from scratch, please first generate the KNN indices for the datasets of interest. Note that this requires generating a cropped dataset first, and you may need to modify `crop datasets.py` to specify the dataset that you are cropping:
-
-```shell script
-python src/crop_datasets.py
-python src/precompute_knns.py
 ```
 
-Then you can run the following in `DARTS/src`:
-```shell script
-python src/train_segmentation.py
-```
-Hyperparameters can be adjusted in [`STEGO/src/configs/train_config.yml`](src/configs/train_config.yml)
+Hyperparameters can be adjusted in [`DARTS/src/configs/train_config.yml`](src/configs/train_config.yml)
 
 ## Citation
 ```
-@misc{lan2023smooseg,
-      title={SmooSeg: Smoothness Prior for Unsupervised Semantic Segmentation}, 
+@misc{,
+      title={Distilling Auxiliary RGB-T Features for Unsupervised Semantic Segmentation<}, 
       author={S Meena Padnekar, Kaushik Mitra and Sukhendu Das},
       year={2025},
       eprint={},
@@ -107,9 +103,8 @@ Hyperparameters can be adjusted in [`STEGO/src/configs/train_config.yml`](src/co
 
 
 ## Acknowledgement
-This study is supported under the RIE2020 Industry Alignment Fund – Industry Collaboration Projects (IAF-ICP) Funding Initiative, as well as cash and in-kind contribution from the industry partner(s), by the National Research Foundation, Singapore under its Industry Alignment Fund – Pre-positioning (IAF-PP) Funding Initiative, and by the Ministry of Education, Singapore under its MOE Academic Research Fund Tier 2 (STEM RIE2025 Award MOE-T2EP20220-0006).
 
-This implementation is based on [STEGO](https://github.com/mhamilton723/STEGO/tree/master). Thanks for the awesome work.
+This implementation is based on [STEGO](https://github.com/mhamilton723/STEGO/). Thanks for the awesome work.
 
 ## Contact
-If you have any questions, please feel free to reach out at `lanm0002@e.ntu.edu.sg`.
+If you have any questions, please feel free to reach out at `cs21d015@cse.iitm.ac.in`.
