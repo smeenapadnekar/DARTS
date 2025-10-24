@@ -58,8 +58,8 @@ Download datasets and place them in 'data' folder in the following structure:
 - [SemanticRT](https://github.com/jiwei0921/SemanticRT)
 
 
-python crop_datasets.py
-```
+
+
 ## Training
 
 To train from scratch, please first generate the KNN indices for the datasets of interest. Note that this requires generating a cropped dataset first, and you may need to modify `crop datasets.py` to specify the dataset that you are cropping:
