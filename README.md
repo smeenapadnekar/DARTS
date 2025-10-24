@@ -4,7 +4,7 @@
 
 <div>
     <a href='' target='_blank'>S Meena Padnekar</a><sup>1</sup>&emsp;
-    <a href='https://www.ee.iitm.ac.in/kmitra/' target='_blank'>Kaushik Mitra</a><sup>1</sup>&emsp;
+    <a href='https://www.ee.iitm.ac.in/kmitra/' target='_blank'>Kaushik Mitra</a><sup>2</sup>&emsp;
     <a href='https://www.cse.iitm.ac.in/~sdas/' target='_blank'>Sukhendu Das</a><sup>1</sup>&emsp;
    
    
