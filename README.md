@@ -85,10 +85,6 @@ python src/eval_segmentation.py
 One can change the evaluation parameters and model by editing [`DARTS/src/configs/eval_config.yml`](src/configs/eval_config.yml)
 
 
-```
-
-Hyperparameters can be adjusted in [`DARTS/src/configs/train_config.yml`](src/configs/train_config.yml)
-
 ## Citation
 ```
 @misc{,
